@@ -8,7 +8,6 @@ public class Reservation {
 
 // creating constructor
 
-
     public Reservation(String roomType, int numberofNights, boolean isWeekends) {
         this.roomType = roomType;
         this.numberofNights = numberofNights;
@@ -41,7 +40,7 @@ public class Reservation {
     }
          //   method for getPrice
     public double getPrice () {
-        if (roomType.equalsIgnoreCase("King")) {
+        if (roomType.equalsIgnoreCase("king")) {
             return 139.99;
         } else {
             return 124;

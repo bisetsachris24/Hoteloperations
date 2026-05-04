@@ -10,10 +10,10 @@ public class Main {
         System.out.println("Room 2 available: " + room2.isAvailable()); // false
 
         // Testing Reservation
-        Reservation res1 = new Reservation("king", 3, false);
-        Reservation res2 = new Reservation("double", 2, true);
-        System.out.println("Res1 total: $" + res1.getReservationTotal()); // $417.00
-        System.out.println("Res2 total: $" + res2.getReservationTotal()); // $272.80
+        Reservation myReservation1 = new Reservation("king", 3, false);
+        Reservation myReservation2 = new Reservation("double", 2, true);
+        System.out.println("Res1 total: $" + myReservation1.getReservationTotal()); // $417.00
+        System.out.println("Res2 total: $" + myReservation2.getReservationTotal()); // $272.80
 
         // Test Employee
         Employee emp1 = new Employee(1, "Alice", "Front Desk", 20.00, 45);
