@@ -49,6 +49,8 @@ public class Room {
     public void setDirty(boolean dirty) {
         isDirty = dirty;
     }
+    //Derived
+
 
 
 
