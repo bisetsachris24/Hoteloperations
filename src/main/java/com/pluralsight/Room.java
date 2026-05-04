@@ -9,7 +9,7 @@ public class Room {
 
 
     // I am about to create constructor
-    public Room (int numberOfBeds, double price, boolean isOccupied, boolean isDirty ) {
+    public Room(int numberOfBeds, double price, boolean isOccupied, boolean isDirty) {
 
 
         this.numberOfBeds = numberOfBeds;
@@ -49,9 +49,12 @@ public class Room {
     public void setDirty(boolean dirty) {
         isDirty = dirty;
     }
+
     //Derived
+    public boolean isAvailable() {
+        return !isOccupied && !isDirty;
 
 
-
+    }
 
 }
