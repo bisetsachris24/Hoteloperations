@@ -1,40 +1,54 @@
 package com.pluralsight;
 
+import java.time.LocalDateTime;
+
 public class Employee {
     private int employeeId;
     private String name;
     private String department;
     private double payRate;
     private double hoursWorked;
-    private int punchInTime;        // tracks when they clocked in
-    private boolean isPunchedIn;
 
+    private int punchInTime;
 
-    public Employee(int employeeId, String name, String department, double payRate, double hoursWorked) {
+    public Employee(int employeeId, String name, String department, double payRate) {
         this.employeeId = employeeId;
         this.name = name;
         this.department = department;
         this.payRate = payRate;
-        this.hoursWorked = hoursWorked;
-        this.isPunchedIn = false;   // not on the clock yet
-        this.punchInTime = 0;
-
+        this.hoursWorked = 0;
     }
 
-    public double getRegularHours() {
-        if(this.hoursWorked<=40) {
-            return this.hoursWorked;
-        }
-        return 40;
+    // ----------- Punch In (manual) -----------
+    public void punchIn(int time) {
+        punchInTime = time;
     }
 
-    public double getOvertimeHours() {
-        return Math.max(0, hoursWorked - 40);
+    // ----------- Punch In (current time) -----------
+    public void punchIn() {
+        LocalDateTime now = LocalDateTime.now();
+        punchInTime = now.getHour(); // simplified to hour
+    }
+
+    // ----------- Punch Out (manual) -----------
+    public void punchOut(int time) {
+        int hours = time - punchInTime;
+        hoursWorked += hours;
+    }
+
+    // ----------- Punch Out (current time) -----------
+    public void punchOut() {
+        LocalDateTime now = LocalDateTime.now();
+        int currentHour = now.getHour();
+        int hours = currentHour - punchInTime;
+        hoursWorked += hours;
+    }
+
+    public double getHoursWorked() {
+        return hoursWorked;
     }
 
     public double getTotalPay() {
-        double regularPay = getRegularHours() * payRate;
-        double overtimePay = getOvertimeHours() * payRate * 1.5;
-        return regularPay + overtimePay;
+        return hoursWorked * payRate;
     }
 }

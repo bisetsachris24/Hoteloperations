@@ -3,36 +3,7 @@ package com.pluralsight;
 public class Main {
     public static void main(String[] args) {
 
-        // let's see if this works
-        Room room1 = new Room(2, 124.00, false, false);
-        Room room2 = new Room(1, 139.00, true, false);
-        System.out.println(" ----Room 1----");
-        System.out.println("Room 1 available: " + room1.isAvailable()); // true
-        System.out.println("Occupied: " + room1.isOccupied());
-        System.out.println("Dirty: " + room1.isDirty());
-        System.out.println("Available: " + room1.isAvailable()); // true
-        room1.checkIn();
-        System.out.println("Available: " + room1.isAvailable()); // false
-        room1.checkOut();
-        System.out.println("Available: " + room1.isAvailable()); // dirty
-        room1.cleanRoom();
-
-        System.out.println("--Room 2--");
-        System.out.println("Room 2 available: " + room2.isAvailable()); // false
-        System.out.println("Occupied: " + room2.isOccupied());
-        System.out.println("Dirty: " + room2.isDirty());
-
-
-        // Testing Reservation
-        Reservation myReservation1 = new Reservation("king", 3, false);
-        Reservation myReservation2 = new Reservation("double", 2, true);
-        System.out.println("Res1 total: $" + myReservation1.getReservationTotal()); // $417.00
-        System.out.println("Res2 total: $" + myReservation2.getReservationTotal()); // $272.80
-
-        // Test Employee
-        Employee emp1 = new Employee(1, "Alice", "Front Desk", 20.00, 45);
-        System.out.println("Regular hours: " + emp1.getRegularHours());   // 40
-        System.out.println("Overtime hours: " + emp1.getOvertimeHours()); // 5
-        System.out.println("Total pay: $" + emp1.getTotalPay());          // $950.00
+        Employee employee = new Employee(2001,"Jsutin","Cook", 20,20);
+        System.out.println(employee.getTotalPay());
     }
 }
