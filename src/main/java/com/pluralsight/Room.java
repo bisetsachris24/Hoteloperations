@@ -57,5 +57,25 @@ public class Room {
         }
         return  false;
     }
+    // creating check in method
+
+    public void checkIn(){
+        if (isAvailable()){
+            isOccupied=true;
+            isDirty=true;
+            System.out.println("Guest checked in. Room is now occupied and dirty.");
+        } else {
+            System.out.println("Room is not available for check in");
+        }
+    }
+    public void checkOut(){
+        isOccupied=false;
+        cleanRoom();
+    }
+    public void cleanRoom(){
+        isDirty= false;
+
+    System.out.println("Room has been cleaned");
+}
 
 }

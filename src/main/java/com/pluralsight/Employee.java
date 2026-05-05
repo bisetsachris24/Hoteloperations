@@ -6,6 +6,9 @@ public class Employee {
     private String department;
     private double payRate;
     private double hoursWorked;
+    private int punchInTime;        // tracks when they clocked in
+    private boolean isPunchedIn;
+
 
     public Employee(int employeeId, String name, String department, double payRate, double hoursWorked) {
         this.employeeId = employeeId;
@@ -13,6 +16,9 @@ public class Employee {
         this.department = department;
         this.payRate = payRate;
         this.hoursWorked = hoursWorked;
+        this.isPunchedIn = false;   // not on the clock yet
+        this.punchInTime = 0;
+
     }
 
     public double getRegularHours() {
