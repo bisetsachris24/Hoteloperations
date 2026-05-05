@@ -7,7 +7,13 @@ public class Main {
         Room room1 = new Room(2, 124.00, false, false);
         Room room2 = new Room(1, 139.00, true, false);
         System.out.println("Room 1 available: " + room1.isAvailable()); // true
+        System.out.println("Occupied: " + room1.isOccupied());
+        System.out.println("Dirty: " + room1.isDirty());
+
         System.out.println("Room 2 available: " + room2.isAvailable()); // false
+        System.out.println("Occupied: " + room2.isOccupied());
+        System.out.println("Dirty: " + room2.isDirty());
+
 
         // Testing Reservation
         Reservation myReservation1 = new Reservation("king", 3, false);

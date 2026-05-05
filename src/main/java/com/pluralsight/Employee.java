@@ -16,7 +16,10 @@ public class Employee {
     }
 
     public double getRegularHours() {
-        return Math.min(40, hoursWorked);
+        if(this.hoursWorked<=40) {
+            return this.hoursWorked;
+        }
+        return 40;
     }
 
     public double getOvertimeHours() {
