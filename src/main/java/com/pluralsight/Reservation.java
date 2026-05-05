@@ -4,6 +4,7 @@ public class Reservation {
 
     private String roomType;
     private int numberofNights;
+    private double price;
     private boolean isWeekends;
 
 // creating constructor
@@ -38,15 +39,16 @@ public class Reservation {
     public void setWeekends(boolean weekends) {
         isWeekends = weekends;
     }
-         //   method for getPrice
+         //   method for getPrice (calculated getter)
     public double getPrice () {
         if (roomType.equalsIgnoreCase("king")) {
-            return 139.99;
+            return 139.00;
         } else {
             return 124;
         }
 
     }
+    // derived method
         public double getReservationTotal () {
             double price = getPrice();
 

@@ -52,9 +52,10 @@ public class Room {
 
     //Derived
     public boolean isAvailable() {
-        return !isOccupied && !isDirty;
-
-
+        if (!isOccupied && !isDirty) {
+            return true;
+        }
+        return  false;
     }
 
 }
