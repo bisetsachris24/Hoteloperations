@@ -19,24 +19,24 @@ public class Employee {
         this.hoursWorked = 0;
     }
 
-    // ----------- Punch In (manual) -----------
+    //  Punch In (manual)
     public void punchIn(int time) {
         punchInTime = time;
     }
 
-    // ----------- Punch In (current time) -----------
+    // Punch In (current time)
     public void punchIn() {
         LocalDateTime now = LocalDateTime.now();
         punchInTime = now.getHour(); // simplified to hour
     }
 
-    // ----------- Punch Out (manual) -----------
+    //  Punch Out (manual)
     public void punchOut(int time) {
         int hours = time - punchInTime;
         hoursWorked += hours;
     }
 
-    // ----------- Punch Out (current time) -----------
+    //  Punch Out (current time)
     public void punchOut() {
         LocalDateTime now = LocalDateTime.now();
         int currentHour = now.getHour();
