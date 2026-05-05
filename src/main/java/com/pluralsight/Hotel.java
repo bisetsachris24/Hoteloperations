@@ -26,7 +26,7 @@ public class Hotel {
         this.bookedBasicRooms = bookedBasicRooms;
     }
 
-    // ----------- Booking Method -----------
+    // Booking Method
     public boolean bookRoom(int numberOfRooms, boolean isSuite) {
 
         if (isSuite) {
@@ -44,7 +44,7 @@ public class Hotel {
         return false;
     }
 
-    // ----------- Derived Getters -----------
+    //  Derived Getters
 
     public int getAvailableSuites() {
         return numberOfSuites - bookedSuites;

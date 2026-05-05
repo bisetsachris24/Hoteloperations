@@ -69,8 +69,8 @@ public class Room {
         }
     }
     public void checkOut(){
-        isOccupied=false;
         cleanRoom();
+        isOccupied=false;
     }
     public void cleanRoom(){
         isDirty= false;
