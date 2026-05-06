@@ -6,8 +6,8 @@ public class Main {
 
 
         //  Hotel
-        System.out.println("\n---- Hotel ----");
-        Hotel hotel = new Hotel("Pluralsight Inn", 5, 20);
+        System.out.println("\n Hotel ");
+        Hotel hotel = new Hotel("Amani 's Inn", 5, 20);
         System.out.println("Available suites: " + hotel.getAvailableSuites()); // 5
         System.out.println("Available rooms:  " + hotel.getAvailableRooms());  // 20
 
